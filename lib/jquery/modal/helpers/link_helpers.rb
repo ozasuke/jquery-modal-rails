@@ -31,9 +31,6 @@ module Jquery
           html_options.delete(:remote)
         end
 
-        # check if we have an id
-        html_options[:id] = UUIDTools::UUID.random_create().to_s unless html_options.has_key?(:id)
-
         # perform the normal link_to operation
         html_link = link_to(name, options, html_options)
 
